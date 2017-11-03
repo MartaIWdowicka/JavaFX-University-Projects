@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="310.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pakage.Controller">
+    <children>
+        <FlowPane layoutX="15.0" prefHeight="305.0" prefWidth="343.0">
+            <children>
+                <BorderPane>
+                    <center>
+                        <ScrollPane BorderPane.alignment="CENTER">
+                            <content>
+                                <Pane>
+                                    <children>
+                                        <AnchorPane prefHeight="303.0" prefWidth="343.0">
+                                            <children>
+                                                <TextField fx:id="valueTextField" layoutX="122.0" layoutY="88.0" prefHeight="25.0" prefWidth="168.0" />
+                                                <Label layoutX="37.0" layoutY="59.0" prefHeight="17.0" prefWidth="207.0" text="Wpisz liczbę i wybierz jednostkę." />
+                                                <Label layoutX="26.0" layoutY="127.0" text="Jednostka bazowa:" />
+                                                <Label layoutX="186.0" layoutY="127.0" prefHeight="17.0" prefWidth="116.0" text="Jednostka docelowa:" />
+                                                <RadioButton fx:id="celciusFrom" layoutX="36.0" layoutY="154.0" mnemonicParsing="false" text="Celcius">
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="from" />
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="fahrenheitFrom" layoutX="36.0" layoutY="175.0" mnemonicParsing="false" text="Fahrenheit" toggleGroup="$from" />
+                                                <RadioButton fx:id="kelvinFrom" accessibleRole="RADIO_MENU_ITEM" layoutX="36.0" layoutY="196.0" mnemonicParsing="false" text="Kelvin" toggleGroup="$from" />
+                                                <RadioButton fx:id="celciusTo" layoutX="193.0" layoutY="154.0" mnemonicParsing="false" text="Celcius">
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="to" />
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="kelvinTo" layoutX="193.0" layoutY="196.0" mnemonicParsing="false" text="Kelvin" toggleGroup="$to" />
+                                                <RadioButton fx:id="fahrenheitTo" layoutX="193.0" layoutY="175.0" mnemonicParsing="false" text="Fahrenheit" toggleGroup="$to" />
+                                                <Label layoutX="56.0" layoutY="250.0" prefHeight="17.0" prefWidth="39.0" text="Wynik:" />
+                                                <TextField fx:id="output" editable="false" layoutX="102.0" layoutY="246.0" prefHeight="26.0" prefWidth="168.0" />
+                                                <Label alignment="CENTER" layoutX="35.0" layoutY="20.0" prefHeight="17.0" prefWidth="282.0" text="KALKULATOR TEMPERATUR" />
+                                                <Label layoutX="37.0" layoutY="92.0" prefHeight="17.0" prefWidth="85.0" text="Temperatura:" />
+                                            </children>
+                                            <padding>
+                                                <Insets left="10.0" />
+                                            </padding>
+                                        </AnchorPane>
+                                    </children>
+                                </Pane>
+                            </content>
+                        </ScrollPane>
+                    </center>
+                    <left>
+                        <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="0.0" BorderPane.alignment="CENTER_LEFT" />
+                    </left>
+                    <right>
+                        <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="0.0" BorderPane.alignment="CENTER_RIGHT" />
+                    </right>
+                </BorderPane>
+            </children>
+        </FlowPane>
+    </children>
+</AnchorPane>
